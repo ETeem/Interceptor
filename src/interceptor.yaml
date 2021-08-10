@@ -1,0 +1,25 @@
+# Steam to Splunk Port 
+stream_to_splunk: true
+
+# Splunk server to stream to (with port)
+splunk_servers:
+  - mysplunkserver.com:7782
+
+# In Seconds
+splunk_timeout: 5
+
+# Subjects to Intercept
+subjects:
+  - test
+  - testing stuff
+
+# Subjects to blackhole (get rid of these)
+  - stuff
+  - things
+
+# Server to forward legit mail to
+smtp_server: smtp.mydomain.com
+smtp_port: 25
+
+# Path to write messages to if stream_to_splunk is false
+file_path: /var/log/interceptor_messages
